@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SevenDigital.Mapper.Domain
+﻿namespace SevenDigital.Mapper.Domain
 {
     public class MappingDto
     {
