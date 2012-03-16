@@ -1,8 +1,33 @@
+using System;
+
 namespace SevenDigital.Mapper.Domain
 {
-    public class SevenDigitalId
+    public class SevenDigitalId : ISevenDigitalId
     {
         private readonly int _id;
+
+        public static ISevenDigitalId From(string id)
+        {
+            try
+            {
+                var sevenDigitalId = int.Parse(id);
+                return new SevenDigitalId(sevenDigitalId);
+            }
+            catch (ArgumentException argumentException)
+            {
+                // null id encountered
+            }
+            catch (FormatException formatException)
+            {
+                // not a valid id
+            }
+            catch (OverflowException overflowException)
+            {
+                // id too large
+            }
+
+            return new NullSevenDigitalId();
+        }
 
         public SevenDigitalId(int id)
         {
@@ -43,5 +68,14 @@ namespace SevenDigital.Mapper.Domain
         {
             return _id;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}", _id);
+        }
     }
+
+    public class NullSevenDigitalId : ISevenDigitalId {}
+
+    public interface ISevenDigitalId {}
 }

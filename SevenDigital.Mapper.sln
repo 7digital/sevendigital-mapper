@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Persist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Persistence.Unit.Tests", "src\SevenDigital.Mapper.Persistence.Unit.Tests\SevenDigital.Mapper.Persistence.Unit.Tests.csproj", "{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Domain.Unit.Tests", "src\SevenDigital.Mapper.Domain.Unit.Tests\SevenDigital.Mapper.Domain.Unit.Tests.csproj", "{8B4792FF-620D-4A6A-8EB3-8DB7DB7C38BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4792FF-620D-4A6A-8EB3-8DB7DB7C38BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4792FF-620D-4A6A-8EB3-8DB7DB7C38BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4792FF-620D-4A6A-8EB3-8DB7DB7C38BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4792FF-620D-4A6A-8EB3-8DB7DB7C38BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

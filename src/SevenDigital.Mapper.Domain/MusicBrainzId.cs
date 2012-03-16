@@ -43,5 +43,10 @@ namespace SevenDigital.Mapper.Domain
         {
             return (_mbid != null ?_mbid.GetHashCode() : 0);
         }
+
+        public override string ToString()
+        {
+            return _mbid;
+        }
     }
 }

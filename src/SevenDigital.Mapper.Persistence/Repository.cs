@@ -4,7 +4,7 @@ using SevenDigital.Mapper.Domain;
 
 namespace SevenDigital.Mapper.Persistence
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private readonly IEnumerable<IMapping> _list;
 
@@ -18,7 +18,7 @@ namespace SevenDigital.Mapper.Persistence
             return _list;
         }
 
-        public IMapping GetBy(Mapping mapping)
+        public IMapping GetBy(IMatchableMapping mapping)
         {
             return _list.FirstOrDefault(m => m.Matches(mapping)) ?? new NullMapping();
         }
