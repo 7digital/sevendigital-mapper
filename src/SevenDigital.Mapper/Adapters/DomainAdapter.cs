@@ -2,7 +2,8 @@ using SevenDigital.Mapper.Domain;
 
 namespace SevenDigital.Mapper.Adapters
 {
-    public class DomainAdapter {
+    public class DomainAdapter : IDomainAdapter
+    {
         public IMapping GetDomainObjectFrom(MappingDto dto)
         {
             var result = new Mapping

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Adapters\DomainAdapter.cs" />
     <Compile Include="Adapters\DomainListAdapter.cs" />
+    <Compile Include="Adapters\IDomainAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
