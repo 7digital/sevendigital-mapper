@@ -40,8 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMapping.cs" />
+    <Compile Include="IMatchableMapping.cs" />
+    <Compile Include="Mapping.cs" />
     <Compile Include="MappingDto.cs" />
     <Compile Include="MusicBrainzId.cs" />
+    <Compile Include="NullMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SevenDigitalId.cs" />
   </ItemGroup>
