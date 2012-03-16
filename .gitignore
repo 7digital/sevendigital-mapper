@@ -1,0 +1,12 @@
+_ReSharper*
+bin
+obj
+*.user
+*.suo
+*.cache
+src/**/Logs
+*.docstates
+out
+errors
+_proc
+Thumbs.db
