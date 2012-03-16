@@ -1,4 +1,4 @@
-namespace SevenDigital.Mapper.Persistence
+namespace SevenDigital.Mapper.Domain
 {
     public class SevenDigitalId
     {
