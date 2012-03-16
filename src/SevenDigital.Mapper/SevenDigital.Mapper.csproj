@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\DomainAdapter.cs" />
+    <Compile Include="Adapters\DomainListAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SevenDigital.Mapper.Domain\SevenDigital.Mapper.Domain.csproj">
+      <Project>{63ECEA58-5288-47B8-AECF-8AA55433736E}</Project>
+      <Name>SevenDigital.Mapper.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

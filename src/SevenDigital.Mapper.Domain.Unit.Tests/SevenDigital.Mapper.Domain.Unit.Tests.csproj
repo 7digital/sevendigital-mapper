@@ -43,13 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DomainAdapterTests.cs" />
+    <Compile Include="DomainListAdapterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SevenDigital.Mapper.Domain\SevenDigital.Mapper.Domain.csproj">
       <Project>{63ECEA58-5288-47B8-AECF-8AA55433736E}</Project>
       <Name>SevenDigital.Mapper.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SevenDigital.Mapper\SevenDigital.Mapper.csproj">
+      <Project>{75723B3D-F983-470E-9DF8-7013433F974F}</Project>
+      <Name>SevenDigital.Mapper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
