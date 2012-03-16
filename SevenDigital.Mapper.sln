@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Loader.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Domain", "src\SevenDigital.Mapper.Domain\SevenDigital.Mapper.Domain.csproj", "{63ECEA58-5288-47B8-AECF-8AA55433736E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Persistence", "src\SevenDigital.Mapper.Persistence\SevenDigital.Mapper.Persistence.csproj", "{18DB2262-DF76-43B6-96E5-392F5A336857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Persistence.Unit.Tests", "src\SevenDigital.Mapper.Persistence.Unit.Tests\SevenDigital.Mapper.Persistence.Unit.Tests.csproj", "{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{63ECEA58-5288-47B8-AECF-8AA55433736E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63ECEA58-5288-47B8-AECF-8AA55433736E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63ECEA58-5288-47B8-AECF-8AA55433736E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DB2262-DF76-43B6-96E5-392F5A336857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DB2262-DF76-43B6-96E5-392F5A336857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DB2262-DF76-43B6-96E5-392F5A336857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DB2262-DF76-43B6-96E5-392F5A336857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA992D0-721C-4EB8-AEE4-5D68F08FE75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
