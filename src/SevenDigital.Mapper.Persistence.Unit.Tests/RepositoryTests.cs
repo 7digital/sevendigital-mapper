@@ -13,5 +13,15 @@ namespace SevenDigital.Mapper.Persistence.Unit.Tests
             var subject = new Repository(loadedList);
             Assert.That(subject.ListAll(), Is.SameAs(loadedList));
         }
+        
+        [Test]
+        public void GetByEmptyMappingReturnsNullMapping()
+        {
+            var loadedList = new List<IMapping>();
+            var subject = new Repository(loadedList);
+            Assert.That(subject.GetBy(new Mapping()), Is.InstanceOf<NullMapping>());
+        }
     }
+
+
 }

@@ -15,7 +15,16 @@ namespace SevenDigital.Mapper.Persistence
         {
             return _list;
         }
+
+        public IMapping GetBy(Mapping mapping)
+        {
+            return new NullMapping();
+        }
     }
 
     public interface IMapping {}
+
+    public class NullMapping : IMapping { }
+
+    public class Mapping : IMapping { }
 }
