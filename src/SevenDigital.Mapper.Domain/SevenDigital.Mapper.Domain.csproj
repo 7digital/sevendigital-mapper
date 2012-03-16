@@ -44,6 +44,10 @@
     <Compile Include="IMatchableMapping.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="MappingDto.cs" />
+    <Compile Include="Matching\IMatcher.cs" />
+    <Compile Include="Matching\MusicBrainzMatcher.cs" />
+    <Compile Include="Matching\NeverMatcher.cs" />
+    <Compile Include="Matching\SevenDigitalMatcher.cs" />
     <Compile Include="MusicBrainzId.cs" />
     <Compile Include="NullMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
