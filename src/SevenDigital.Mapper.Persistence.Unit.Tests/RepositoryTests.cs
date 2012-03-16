@@ -6,20 +6,27 @@ namespace SevenDigital.Mapper.Persistence.Unit.Tests
     [TestFixture]
     public class RepositoryTests
     {
+        private Repository _subject;
+        private List<IMapping> _loadedList;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _loadedList = new List<IMapping>();
+            _subject = new Repository(_loadedList);
+        }
+
         [Test]
         public void ListAllReturnsEntireRepository()
         {
-            var loadedList = new List<IMapping>();
-            var subject = new Repository(loadedList);
-            Assert.That(subject.ListAll(), Is.SameAs(loadedList));
+            Assert.That(_subject.ListAll(), Is.SameAs(_loadedList));
         }
         
         [Test]
         public void GetByEmptyMappingReturnsNullMapping()
         {
-            var loadedList = new List<IMapping>();
-            var subject = new Repository(loadedList);
-            Assert.That(subject.GetBy(new Mapping()), Is.InstanceOf<NullMapping>());
+
+            Assert.That(_subject.GetBy(new Mapping()), Is.InstanceOf<NullMapping>());
         }
     }
 
