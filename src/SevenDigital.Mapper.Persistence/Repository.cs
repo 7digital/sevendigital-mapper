@@ -24,11 +24,11 @@ namespace SevenDigital.Mapper.Persistence
     }
 
     public interface IMapping {
-        bool Matches(IMatchableMapping mapping);
+        bool Matches(IMatchableMapping searchMapping);
     }
 
     public class NullMapping : IMapping {
-        public bool Matches(IMatchableMapping mapping)
+        public bool Matches(IMatchableMapping searchMapping)
         {
             return false;
         }
@@ -36,59 +36,32 @@ namespace SevenDigital.Mapper.Persistence
 
     public interface IMatchableMapping {
         SevenDigitalId SevenDigital { get; set; }
+        MusicBrainzId MusicBrainz { get; set; }
     }
 
     public class Mapping : IMapping, IMatchableMapping
     {
+        private readonly SevenDigitalId NULL_SEVEN_DIGITAL_ID = new SevenDigitalId(0);
+        private readonly MusicBrainzId NULL_MUSIC_BRAINZ_ID = new MusicBrainzId("");
+
+        public Mapping()
+        {
+            SevenDigital = NULL_SEVEN_DIGITAL_ID;
+            MusicBrainz = NULL_MUSIC_BRAINZ_ID;
+        }
+
         public SevenDigitalId SevenDigital { get; set; }
-        public bool Matches(IMatchableMapping mapping)
-        {
-            return SevenDigital.Equals(mapping.SevenDigital);
-        }
-    }
 
-    public class SevenDigitalId
-    {
-        private readonly int _id;
+        public MusicBrainzId MusicBrainz { get; set; }
 
-        public SevenDigitalId(int id)
+        public bool Matches(IMatchableMapping searchMapping)
         {
-            _id = id;
-        }
+            if (!searchMapping.SevenDigital.Equals(NULL_SEVEN_DIGITAL_ID))
+                return SevenDigital.Equals(searchMapping.SevenDigital);
+            if (!searchMapping.MusicBrainz.Equals(NULL_MUSIC_BRAINZ_ID))
+                return MusicBrainz.Equals(searchMapping.MusicBrainz);
 
-        public bool Equals(SevenDigitalId other)
-        {
-            if(ReferenceEquals(null, other))
-            {
-                return false;
-            }
-            if(ReferenceEquals(this, other))
-            {
-                return true;
-            }
-            return other._id == _id;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if(ReferenceEquals(null, obj))
-            {
-                return false;
-            }
-            if(ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-            if(obj.GetType() != typeof(SevenDigitalId))
-            {
-                return false;
-            }
-            return Equals((SevenDigitalId) obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return _id;
+            return false;
         }
     }
 }
