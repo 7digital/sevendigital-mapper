@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
+using SevenDigital.Mapper.Domain;
 
 namespace SevenDigital.Mapper.Persistence.Unit.Tests
 {
