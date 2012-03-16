@@ -5,7 +5,7 @@ using SevenDigital.Mapper.Domain;
 
 namespace SevenDigital.Mapper.Loader
 {
-    public class LastFmLoader : ITabSeparatedVariableLoader
+    public class LastFmLoader : ILoader
     {
         public IEnumerable<MappingDto> Load(string filePath)
         {

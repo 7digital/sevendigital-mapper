@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1FA13E7F-D7EF-40DF-9F60-ECFC23407F2F}</ProjectGuid>
+    <ProjectGuid>{4CED5F26-53DB-446F-9555-98D837CEE47F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SevenDigital.Mapper.Loader</RootNamespace>
-    <AssemblyName>SevenDigital.Mapper.Loader</AssemblyName>
+    <RootNamespace>SevenDigital.Mapper.Unit.Tests</RootNamespace>
+    <AssemblyName>SevenDigital.Mapper.Unit.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILoader.cs" />
-    <Compile Include="LastFmLoader.cs" />
+    <Compile Include="MappingServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SevenDigital.Mapper.Domain\SevenDigital.Mapper.Domain.csproj">
       <Project>{63ECEA58-5288-47B8-AECF-8AA55433736E}</Project>
       <Name>SevenDigital.Mapper.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SevenDigital.Mapper.Loader\SevenDigital.Mapper.Loader.csproj">
+      <Project>{1FA13E7F-D7EF-40DF-9F60-ECFC23407F2F}</Project>
+      <Name>SevenDigital.Mapper.Loader</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

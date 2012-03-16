@@ -3,7 +3,7 @@ using SevenDigital.Mapper.Domain;
 
 namespace SevenDigital.Mapper.Loader
 {
-    public interface ITabSeparatedVariableLoader {
+    public interface ILoader {
         IEnumerable<MappingDto> Load(string filePath);
     }
 }
