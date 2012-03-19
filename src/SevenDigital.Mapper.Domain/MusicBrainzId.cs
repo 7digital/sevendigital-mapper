@@ -1,7 +1,11 @@
+using System.Runtime.Serialization;
+
 namespace SevenDigital.Mapper.Domain
 {
+    [DataContract]
     public class MusicBrainzId
     {
+        [DataMember]
         private readonly string _mbid;
 
         public MusicBrainzId(string mbid)

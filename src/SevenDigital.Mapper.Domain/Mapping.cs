@@ -1,7 +1,11 @@
+using System;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 using SevenDigital.Mapper.Domain.Matching;
 
 namespace SevenDigital.Mapper.Domain
 {
+    [DataContract]
     public class Mapping : IMapping, IMatchableMapping
     {
         public static readonly SevenDigitalId NULL_SEVEN_DIGITAL_ID = new SevenDigitalId(0);
@@ -13,8 +17,11 @@ namespace SevenDigital.Mapper.Domain
             MusicBrainz = NULL_MUSIC_BRAINZ_ID;
         }
 
+        
+        [DataMember]
         public ISevenDigitalId SevenDigital { get; set; }
 
+        [DataMember]
         public MusicBrainzId MusicBrainz { get; set; }
 
         public bool Matches(IMatchableMapping searchMapping)

@@ -58,6 +58,14 @@
       <Project>{1FA13E7F-D7EF-40DF-9F60-ECFC23407F2F}</Project>
       <Name>SevenDigital.Mapper.Loader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SevenDigital.Mapper.Persistence\SevenDigital.Mapper.Persistence.csproj">
+      <Project>{18DB2262-DF76-43B6-96E5-392F5A336857}</Project>
+      <Name>SevenDigital.Mapper.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SevenDigital.Mapper\SevenDigital.Mapper.csproj">
+      <Project>{75723B3D-F983-470E-9DF8-7013433F974F}</Project>
+      <Name>SevenDigital.Mapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

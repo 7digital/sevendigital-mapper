@@ -17,19 +17,4 @@ namespace SevenDigital.Mapper.Unit.Tests
             loader.Verify( l => l.Load(It.IsAny<string>()));
         }
     }
-
-    public class MappingService {
-        private readonly ILoader _loader;
-
-        public MappingService(ILoader loader)
-        {
-            _loader = loader;
-        }
-
-        public IMapping Map(IMapping mapping)
-        {
-            var dtos = _loader.Load(@"C:\work\albums.query.tsv");
-            return new NullMapping();
-        }
-    }
 }
