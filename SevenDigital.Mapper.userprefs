@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|Mixed Platforms" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/SevenDigital.Mapper.Web.Hosting/Program.cs">
+    <Files>
+      <File FileName="src/SevenDigital.Mapper.Domain/SevenDigitalId.cs" Line="25" Column="14" />
+      <File FileName="src/SevenDigital.Mapper.Web.Hosting/Program.cs" Line="19" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="SevenDigital.Mapper.Domain" expanded="True" />
+          <Node name="SevenDigital.Mapper.Web.Hosting" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

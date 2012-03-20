@@ -15,7 +15,7 @@ namespace SevenDigital.Mapper
 
         public IMapping Map(IMatchableMapping mapping)
         {
-            var dtos = _loader.Load(@"C:\work\sevendigital-mapper\data\tsv\albums.query.tsv");
+            var dtos = _loader.Load(@"~/Documents/sevendigital-mapper/data/tsv/albums.query.tsv");
             var mappings =
                 new DomainListAdapter(new DomainAdapter()).GetDomainObjectsFor(dtos);
             var repo = new Repository(mappings);

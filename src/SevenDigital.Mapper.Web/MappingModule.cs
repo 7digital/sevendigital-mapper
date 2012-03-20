@@ -3,6 +3,7 @@ using Nancy.Responses;
 using SevenDigital.Mapper.Domain;
 using SevenDigital.Mapper.Loader;
 using SevenDigital.Mapper.Unit.Tests;
+using System;
 
 namespace SevenDigital.Mapper.Web
 {
@@ -29,6 +30,8 @@ namespace SevenDigital.Mapper.Web
                                               ());
                                                                        
                                 };
+			Get["/status"] = _ => DateTime.Now.ToString();
         }
+		
     }
 }
