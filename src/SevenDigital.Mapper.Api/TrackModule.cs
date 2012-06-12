@@ -21,7 +21,5 @@ namespace SevenDigital.Mapper.Api
     		var viewmodel = new SerializableMapping();
     		return Response.AsJson(result.To(viewmodel));
     	}
-
-    	
     }
 }

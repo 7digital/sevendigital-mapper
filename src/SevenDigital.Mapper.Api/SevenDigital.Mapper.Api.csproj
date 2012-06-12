@@ -70,6 +70,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumModule.cs" />
+    <Compile Include="ArtistModule.cs" />
     <Compile Include="SerializableMapping.cs" />
     <Compile Include="TrackModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

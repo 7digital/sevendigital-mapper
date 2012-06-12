@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="ftp://ftp.paulshannon.com" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="paulshannon.com" publishMethod="FTP" replaceMatchingFiles="True" userName="mapper" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="bin/SevenDigital.Mapper.Api.dll" publishTime="06/12/2012 16:07:37" />
+    <file relUrl="bin/SevenDigital.Mapper.Api.dll" publishTime="06/12/2012 16:30:59" />
     <file relUrl="bin/Nancy.Hosting.Aspnet.dll" publishTime="06/12/2012 11:03:58" />
-    <file relUrl="bin/SevenDigital.Mapper.dll" publishTime="06/12/2012 16:07:37" />
-    <file relUrl="Web.config" publishTime="06/12/2012 16:08:32" />
-    <file relUrl="bin/SevenDigital.Mapper.Persistence.dll" publishTime="06/12/2012 16:07:35" />
-    <file relUrl="bin/SevenDigital.Mapper.Domain.dll" publishTime="06/12/2012 16:07:35" />
+    <file relUrl="bin/SevenDigital.Mapper.dll" publishTime="06/12/2012 16:30:58" />
+    <file relUrl="Web.config" publishTime="06/12/2012 16:37:17" />
+    <file relUrl="bin/SevenDigital.Mapper.Persistence.dll" publishTime="06/12/2012 16:30:57" />
+    <file relUrl="bin/SevenDigital.Mapper.Domain.dll" publishTime="06/12/2012 16:30:56" />
     <file relUrl="bin/Nancy.dll" publishTime="06/12/2012 11:03:55" />
     <file relUrl="packages.config" publishTime="06/12/2012 11:03:59" />
-    <file relUrl="bin/SevenDigital.Mapper.Loader.dll" publishTime="06/12/2012 16:07:36" />
+    <file relUrl="bin/SevenDigital.Mapper.Loader.dll" publishTime="06/12/2012 16:30:57" />
   </publishProfile>
 </publishData>
