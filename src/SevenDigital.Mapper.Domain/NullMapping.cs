@@ -5,5 +5,10 @@ namespace SevenDigital.Mapper.Domain
         {
             return false;
         }
+
+    	public IViewModel To(IViewModel view)
+    	{
+    		return view;
+    	}
     }
 }

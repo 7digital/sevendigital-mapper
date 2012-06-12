@@ -1,27 +1,33 @@
 using System;
-using System.Runtime.Serialization;
-using System.Xml.Serialization;
 using SevenDigital.Mapper.Domain.Matching;
 
 namespace SevenDigital.Mapper.Domain
 {
-    [DataContract]
     public class Mapping : IMapping, IMatchableMapping
     {
         public static readonly SevenDigitalId NULL_SEVEN_DIGITAL_ID = new SevenDigitalId(0);
         public static readonly MusicBrainzId NULL_MUSIC_BRAINZ_ID = new MusicBrainzId("");
 
-        public Mapping()
+		public static Mapping From(IViewModel view)
+		{
+			var mapping = new Mapping();
+			if (!String.IsNullOrEmpty(view.MusicBrainz))
+				mapping.MusicBrainz = new MusicBrainzId(view.MusicBrainz);
+
+			if(!String.IsNullOrEmpty(view.SevenDigital))
+				mapping.SevenDigital = new SevenDigitalId(int.Parse(view.SevenDigital));
+
+			return mapping;
+		}
+
+    	public Mapping()
         {
             SevenDigital = NULL_SEVEN_DIGITAL_ID;
             MusicBrainz = NULL_MUSIC_BRAINZ_ID;
         }
 
-        
-        [DataMember]
         public ISevenDigitalId SevenDigital { get; set; }
 
-        [DataMember]
         public MusicBrainzId MusicBrainz { get; set; }
 
         public bool Matches(IMatchableMapping searchMapping)
@@ -30,7 +36,14 @@ namespace SevenDigital.Mapper.Domain
                 .Match(this, searchMapping);
         }
 
-        public bool Equals(Mapping other)
+    	public IViewModel To(IViewModel view)
+    	{
+    		view.MusicBrainz = MusicBrainz.ToString();
+    		view.SevenDigital = SevenDigital.ToString();
+    		return view;
+    	}
+
+    	public bool Equals(Mapping other)
         {
             if(ReferenceEquals(null, other))
             {
@@ -43,7 +56,7 @@ namespace SevenDigital.Mapper.Domain
             return Equals(other.SevenDigital, SevenDigital) && Equals(other.MusicBrainz, MusicBrainz);
         }
 
-        public override bool Equals(object obj)
+    	public override bool Equals(object obj)
         {
             if(ReferenceEquals(null, obj))
             {
@@ -60,17 +73,12 @@ namespace SevenDigital.Mapper.Domain
             return Equals((Mapping) obj);
         }
 
-        public override int GetHashCode()
+    	public override int GetHashCode()
         {
             unchecked
             {
                 return ((SevenDigital != null ?SevenDigital.GetHashCode() : 0) * 397) ^ (MusicBrainz != null ?MusicBrainz.GetHashCode() : 0);
             }
-        }
-
-        public override string ToString()
-        {
-            return string.Format("SevenDigital: {0}, MusicBrainz: {1}", SevenDigital, MusicBrainz);
         }
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IMapping.cs" />
     <Compile Include="IMatchableMapping.cs" />
+    <Compile Include="IViewModel.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="MappingDto.cs" />
     <Compile Include="Matching\IMatcher.cs" />

@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{091D0F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Api", "src\SevenDigital.Mapper.Api\SevenDigital.Mapper.Api.csproj", "{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Api.Acceptance.Tests", "src\SevenDigital.Mapper.Api.Acceptance.Tests\SevenDigital.Mapper.Api.Acceptance.Tests.csproj", "{DAA9FA67-77DB-4441-A71A-DB5933C72027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,6 +150,16 @@ Global
 		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|x86.ActiveCfg = Release|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DAA9FA67-77DB-4441-A71A-DB5933C72027}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

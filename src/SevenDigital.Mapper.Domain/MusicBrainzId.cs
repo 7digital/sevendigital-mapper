@@ -2,10 +2,8 @@ using System.Runtime.Serialization;
 
 namespace SevenDigital.Mapper.Domain
 {
-    [DataContract]
     public class MusicBrainzId
     {
-        [DataMember]
         private readonly string _mbid;
 
         public MusicBrainzId(string mbid)
@@ -13,7 +11,12 @@ namespace SevenDigital.Mapper.Domain
             _mbid = mbid;
         }
 
-        public bool Equals(MusicBrainzId other)
+    	public string Mbid
+    	{
+    		get { return _mbid; }
+    	}
+
+    	public bool Equals(MusicBrainzId other)
         {
             if(ReferenceEquals(null, other))
             {
@@ -23,7 +26,7 @@ namespace SevenDigital.Mapper.Domain
             {
                 return true;
             }
-            return Equals(other._mbid, _mbid);
+            return Equals(other.Mbid, Mbid);
         }
 
         public override bool Equals(object obj)
@@ -45,12 +48,16 @@ namespace SevenDigital.Mapper.Domain
 
         public override int GetHashCode()
         {
-            return (_mbid != null ?_mbid.GetHashCode() : 0);
+            return (Mbid != null ?Mbid.GetHashCode() : 0);
         }
 
         public override string ToString()
         {
-            return _mbid;
+            return Mbid;
         }
+
+
     }
+
+
 }
