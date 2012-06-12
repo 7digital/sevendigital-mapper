@@ -8,6 +8,7 @@ namespace SevenDigital.Mapper.Api
         public MappingModule()
         {
 			Get["/"] = _ => DateTime.Now.ToString();
+
         }
 		
     }
