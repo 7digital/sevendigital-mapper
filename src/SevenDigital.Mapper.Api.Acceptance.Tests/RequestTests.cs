@@ -12,7 +12,7 @@ namespace SevenDigital.Mapper.Api.Acceptance.Tests
 		[Test]
 		public void Should_map_from_json_for_musicbrainz()
 		{
-			var request = (HttpWebRequest)WebRequest.Create("http://localhost/mapper");
+			var request = (HttpWebRequest)WebRequest.Create("http://localhost/mapper/track");
 			request.ContentType = "application/json";
 			request.Method = "POST";
 			using (var streamWriter = new StreamWriter(request.GetRequestStream()))
@@ -31,7 +31,7 @@ namespace SevenDigital.Mapper.Api.Acceptance.Tests
 		[Test]
 		public void Should_map_from_json_for_sevendigital()
 		{
-			var request = (HttpWebRequest)WebRequest.Create("http://localhost/mapper");
+			var request = (HttpWebRequest)WebRequest.Create("http://localhost/mapper/track");
 			request.ContentType = "application/json";
 			request.Method = "POST";
 			using (var streamWriter = new StreamWriter(request.GetRequestStream()))

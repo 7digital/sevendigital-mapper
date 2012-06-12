@@ -10,18 +10,21 @@ namespace SevenDigital.Mapper
 {
     public class MappingService {
         private readonly ILoader _loader;
+    	private string _tracks;
 
-        public MappingService(ILoader loader)
+    	public MappingService(ILoader loader, string tracks)
         {
             _loader = loader;
+			_tracks = tracks;
         }
 
         public IMapping Map(IMatchableMapping mapping)
         {
 			var pathToAssembly = Assembly.GetAssembly(GetType()).CodeBase.Replace(@"file:///", "");
-       	
-			
-			var trackFilePath = Path.Combine(new DirectoryInfo(pathToAssembly).Parent.Parent.FullName, "App_Data", "tracks.query.tsv");
+
+
+        	
+        	var trackFilePath = Path.Combine(new DirectoryInfo(pathToAssembly).Parent.Parent.FullName, "App_Data", _tracks + ".query.tsv");
 			var dtos = _loader.Load(trackFilePath);
             var mappings =
                 new DomainListAdapter(new DomainAdapter()).GetDomainObjectsFor(dtos);

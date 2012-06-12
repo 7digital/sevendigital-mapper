@@ -12,7 +12,7 @@ namespace SevenDigital.Mapper.Unit.Tests
         public void ServiceLoadsFromFile()
         {
             var loader = new Mock<ILoader>();
-            var subject = new MappingService(loader.Object);
+            var subject = new MappingService(loader.Object, "tracks");
             var result = subject.Map(new Mapping());
             loader.Verify( l => l.Load(It.IsAny<string>()));
         }

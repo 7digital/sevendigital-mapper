@@ -11,7 +11,7 @@ namespace SevenDigital.Mapper.Web
     {
         public MappingModule()
         {
-            var mappingService = new MappingService(new LastFmLoader());
+            var mappingService = new MappingService(new LastFmLoader(), "tracks");
             Get["/mbid/{Mbid}"] = req =>
                                   {
                                       var result = mappingService.Map(new Mapping { MusicBrainz = new MusicBrainzId(req.Mbid) });
