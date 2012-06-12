@@ -21,6 +21,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Web", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Web.Hosting", "src\SevenDigital.Mapper.Web.Hosting\SevenDigital.Mapper.Web.Hosting.csproj", "{E71176DC-F235-47C1-B9D2-9C7F06442884}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{091D0F10-B02C-4745-9439-494328841072}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Mapper.Api", "src\SevenDigital.Mapper.Api\SevenDigital.Mapper.Api.csproj", "{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +138,16 @@ Global
 		{E71176DC-F235-47C1-B9D2-9C7F06442884}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E71176DC-F235-47C1-B9D2-9C7F06442884}.Release|x86.ActiveCfg = Release|x86
 		{E71176DC-F235-47C1-B9D2-9C7F06442884}.Release|x86.Build.0 = Release|x86
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3D6E5833-D820-4E8B-9C6C-B487DC8E5A41}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
